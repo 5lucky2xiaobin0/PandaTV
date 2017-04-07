@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4F5949661E97605300AE9FE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5949651E97605300AE9FE7 /* AppDelegate.swift */; };
-		4F59496B1E97605300AE9FE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F5949691E97605300AE9FE7 /* Main.storyboard */; };
 		4F59496D1E97605300AE9FE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F59496C1E97605300AE9FE7 /* Assets.xcassets */; };
 		4F594A741E97664E00AE9FE7 /* BigEatVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F594A181E97664E00AE9FE7 /* BigEatVC.storyboard */; };
 		4F594A751E97664E00AE9FE7 /* BigEatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F594A191E97664E00AE9FE7 /* BigEatVC.swift */; };
@@ -21,7 +20,6 @@
 		4F594A7C1E97664E00AE9FE7 /* AllGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F594A271E97664E00AE9FE7 /* AllGameVC.swift */; };
 		4F594A7D1E97664E00AE9FE7 /* CommendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F594A281E97664E00AE9FE7 /* CommendVC.swift */; };
 		4F594A7E1E97664E00AE9FE7 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F594A291E97664E00AE9FE7 /* HomeVC.swift */; };
-		4F594A7F1E97664E00AE9FE7 /* ShowBasicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F594A2A1E97664E00AE9FE7 /* ShowBasicVC.swift */; };
 		4F594A801E97664E00AE9FE7 /* TakeVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F594A2B1E97664E00AE9FE7 /* TakeVC.storyboard */; };
 		4F594A811E97664E00AE9FE7 /* TakeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F594A2C1E97664E00AE9FE7 /* TakeVC.swift */; };
 		4F594A841E97664E00AE9FE7 /* GameBasicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F594A341E97664E00AE9FE7 /* GameBasicVC.swift */; };
@@ -74,6 +72,8 @@
 		4F594AB51E97664E00AE9FE7 /* ShowTypeCycleVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F594A711E97664E00AE9FE7 /* ShowTypeCycleVM.swift */; };
 		4F594AB61E97664E00AE9FE7 /* ShowVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F594A721E97664E00AE9FE7 /* ShowVM.swift */; };
 		4F594AB71E97664E00AE9FE7 /* ShowXYanVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F594A731E97664E00AE9FE7 /* ShowXYanVM.swift */; };
+		4F594ABA1E976BCC00AE9FE7 /* 演示.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4F594AB91E976BCC00AE9FE7 /* 演示.gif */; };
+		4F594ABC1E976CAE00AE9FE7 /* ShowBasicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F594ABB1E976CAE00AE9FE7 /* ShowBasicVC.swift */; };
 		5251DCD6D1485AA423D55BF5 /* Pods_PandaTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F038E51978661BB0127FA60A /* Pods_PandaTV.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,7 +81,6 @@
 		3994DC30AE61A023F85BBE9E /* Pods-PandaTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PandaTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-PandaTV/Pods-PandaTV.release.xcconfig"; sourceTree = "<group>"; };
 		4F5949621E97605300AE9FE7 /* PandaTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PandaTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F5949651E97605300AE9FE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4F59496A1E97605300AE9FE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F59496C1E97605300AE9FE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F5949711E97605300AE9FE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F594A181E97664E00AE9FE7 /* BigEatVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BigEatVC.storyboard; sourceTree = "<group>"; };
@@ -95,7 +94,6 @@
 		4F594A271E97664E00AE9FE7 /* AllGameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllGameVC.swift; sourceTree = "<group>"; };
 		4F594A281E97664E00AE9FE7 /* CommendVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommendVC.swift; sourceTree = "<group>"; };
 		4F594A291E97664E00AE9FE7 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		4F594A2A1E97664E00AE9FE7 /* ShowBasicVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowBasicVC.swift; sourceTree = "<group>"; };
 		4F594A2B1E97664E00AE9FE7 /* TakeVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TakeVC.storyboard; sourceTree = "<group>"; };
 		4F594A2C1E97664E00AE9FE7 /* TakeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeVC.swift; sourceTree = "<group>"; };
 		4F594A341E97664E00AE9FE7 /* GameBasicVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBasicVC.swift; sourceTree = "<group>"; };
@@ -148,6 +146,8 @@
 		4F594A711E97664E00AE9FE7 /* ShowTypeCycleVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowTypeCycleVM.swift; sourceTree = "<group>"; };
 		4F594A721E97664E00AE9FE7 /* ShowVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowVM.swift; sourceTree = "<group>"; };
 		4F594A731E97664E00AE9FE7 /* ShowXYanVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowXYanVM.swift; sourceTree = "<group>"; };
+		4F594AB91E976BCC00AE9FE7 /* 演示.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "演示.gif"; sourceTree = "<group>"; };
+		4F594ABB1E976CAE00AE9FE7 /* ShowBasicVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowBasicVC.swift; sourceTree = "<group>"; };
 		A9368A04B2A216871A2825AE /* Pods-PandaTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PandaTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PandaTV/Pods-PandaTV.debug.xcconfig"; sourceTree = "<group>"; };
 		F038E51978661BB0127FA60A /* Pods_PandaTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PandaTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -186,8 +186,8 @@
 			isa = PBXGroup;
 			children = (
 				4F594A161E97664E00AE9FE7 /* Classes */,
+				4F594AB81E976BCC00AE9FE7 /* 演示图片 */,
 				4F5949651E97605300AE9FE7 /* AppDelegate.swift */,
-				4F5949691E97605300AE9FE7 /* Main.storyboard */,
 				4F59496C1E97605300AE9FE7 /* Assets.xcassets */,
 				4F5949711E97605300AE9FE7 /* Info.plist */,
 			);
@@ -279,7 +279,6 @@
 				4F594A271E97664E00AE9FE7 /* AllGameVC.swift */,
 				4F594A281E97664E00AE9FE7 /* CommendVC.swift */,
 				4F594A291E97664E00AE9FE7 /* HomeVC.swift */,
-				4F594A2A1E97664E00AE9FE7 /* ShowBasicVC.swift */,
 				4F594A2B1E97664E00AE9FE7 /* TakeVC.storyboard */,
 				4F594A2C1E97664E00AE9FE7 /* TakeVC.swift */,
 			);
@@ -324,6 +323,7 @@
 				4F594A341E97664E00AE9FE7 /* GameBasicVC.swift */,
 				4F594A351E97664E00AE9FE7 /* MainNavVC.swift */,
 				4F594A361E97664E00AE9FE7 /* MainTabBarVC.swift */,
+				4F594ABB1E976CAE00AE9FE7 /* ShowBasicVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -465,6 +465,14 @@
 			path = ViewModal;
 			sourceTree = "<group>";
 		};
+		4F594AB81E976BCC00AE9FE7 /* 演示图片 */ = {
+			isa = PBXGroup;
+			children = (
+				4F594AB91E976BCC00AE9FE7 /* 演示.gif */,
+			);
+			path = "演示图片";
+			sourceTree = "<group>";
+		};
 		B197205C264511A12016CCEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -548,13 +556,13 @@
 				4F594A911E97664E00AE9FE7 /* CycleCell.xib in Resources */,
 				4F59496D1E97605300AE9FE7 /* Assets.xcassets in Resources */,
 				4F594A9D1E97664E00AE9FE7 /* GameThumbImageCell.xib in Resources */,
-				4F59496B1E97605300AE9FE7 /* Main.storyboard in Resources */,
 				4F594AA41E97664E00AE9FE7 /* ShowCell.xib in Resources */,
 				4F594AAC1E97664E00AE9FE7 /* PodfileVC.storyboard in Resources */,
 				4F594A9F1E97664E00AE9FE7 /* HeaderCell.xib in Resources */,
 				4F594A951E97664E00AE9FE7 /* FooterCell.xib in Resources */,
 				4F594A931E97664E00AE9FE7 /* CycleView.xib in Resources */,
 				4F594A991E97664E00AE9FE7 /* GameCell.xib in Resources */,
+				4F594ABA1E976BCC00AE9FE7 /* 演示.gif in Resources */,
 				4F594AA21E97664E00AE9FE7 /* LoadImageView.xib in Resources */,
 				4F594A801E97664E00AE9FE7 /* TakeVC.storyboard in Resources */,
 				4F594A9B1E97664E00AE9FE7 /* GameHotView.xib in Resources */,
@@ -645,7 +653,6 @@
 				4F594AA01E97664E00AE9FE7 /* IndexTitleView.swift in Sources */,
 				4F594A901E97664E00AE9FE7 /* CycleCell.swift in Sources */,
 				4F594A8A1E97664E00AE9FE7 /* ShowItem.swift in Sources */,
-				4F594A7F1E97664E00AE9FE7 /* ShowBasicVC.swift in Sources */,
 				4F594AB51E97664E00AE9FE7 /* ShowTypeCycleVM.swift in Sources */,
 				4F594A871E97664E00AE9FE7 /* CycleItem.swift in Sources */,
 				4F594A791E97664E00AE9FE7 /* GameLisetItem.swift in Sources */,
@@ -661,6 +668,7 @@
 				4F594A921E97664E00AE9FE7 /* CycleView.swift in Sources */,
 				4F594A781E97664E00AE9FE7 /* GameVC.swift in Sources */,
 				4F594A761E97664E00AE9FE7 /* GameListVC.swift in Sources */,
+				4F594ABC1E976CAE00AE9FE7 /* ShowBasicVC.swift in Sources */,
 				4F594A8E1E97664E00AE9FE7 /* UserItem.swift in Sources */,
 				4F594AAB1E97664E00AE9FE7 /* PandaTV.swift in Sources */,
 				4F594AAD1E97664E00AE9FE7 /* PodfileVC.swift in Sources */,
@@ -674,17 +682,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		4F5949691E97605300AE9FE7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4F59496A1E97605300AE9FE7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4F5949721E97605300AE9FE7 /* Debug */ = {
@@ -728,7 +725,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -772,7 +769,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -784,15 +781,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A9368A04B2A216871A2825AE /* Pods-PandaTV.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 9WXBEMHMFF;
 				INFOPLIST_FILE = PandaTV/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xiaobinOC.PandaTV;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xiaobin.PandaTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -800,15 +799,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3994DC30AE61A023F85BBE9E /* Pods-PandaTV.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 9WXBEMHMFF;
 				INFOPLIST_FILE = PandaTV/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xiaobinOC.PandaTV;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xiaobin.PandaTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
