@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="GameCell" customModule="PandaTV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="165" height="123"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="165" height="123"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主播名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqs-AQ-iaQ">
+                        <rect key="frame" x="0.0" y="107" width="115" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="nXM-vR-cwB"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="直播标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1q-l3-02D">
+                        <rect key="frame" x="0.0" y="90" width="165" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="MbU-IE-AUe"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AfQ-k3-c8n">
+                        <rect key="frame" x="0.0" y="0.0" width="165" height="88"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gw7-Zz-OSo">
+                        <rect key="frame" x="115" y="107" width="50" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="Z16-Yo-Br0"/>
+                            <constraint firstAttribute="height" constant="16" id="bWK-tQ-1ns"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <state key="normal" title="123.3万" image="look_image">
+                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDT-A7-nUh">
+                        <rect key="frame" x="42" y="0.0" width="80" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="魔兽争霸DOTA1" backgroundImage="classify_tag">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="AfQ-k3-c8n" secondAttribute="trailing" id="5Po-gN-8lm"/>
+                <constraint firstItem="AfQ-k3-c8n" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9yo-7H-v2U"/>
+                <constraint firstItem="Gw7-Zz-OSo" firstAttribute="leading" secondItem="Mqs-AQ-iaQ" secondAttribute="trailing" id="A7y-eG-cPy"/>
+                <constraint firstItem="vDT-A7-nUh" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="BAV-Zk-UIg"/>
+                <constraint firstAttribute="bottom" secondItem="Gw7-Zz-OSo" secondAttribute="bottom" id="BpP-ql-BJx"/>
+                <constraint firstItem="Z1q-l3-02D" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="EaJ-tg-ApN"/>
+                <constraint firstItem="AfQ-k3-c8n" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="FTW-p6-2Ja"/>
+                <constraint firstItem="Z1q-l3-02D" firstAttribute="top" secondItem="AfQ-k3-c8n" secondAttribute="bottom" constant="2" id="ILh-yb-XvH"/>
+                <constraint firstItem="vDT-A7-nUh" firstAttribute="top" secondItem="AfQ-k3-c8n" secondAttribute="top" id="OWj-Tj-6TK"/>
+                <constraint firstAttribute="trailing" secondItem="Z1q-l3-02D" secondAttribute="trailing" id="e8u-IM-KC5"/>
+                <constraint firstAttribute="trailing" secondItem="Gw7-Zz-OSo" secondAttribute="trailing" id="h45-HG-XAG"/>
+                <constraint firstAttribute="bottom" secondItem="Mqs-AQ-iaQ" secondAttribute="bottom" id="o7x-c9-aoc"/>
+                <constraint firstItem="Gw7-Zz-OSo" firstAttribute="top" secondItem="Z1q-l3-02D" secondAttribute="bottom" constant="1" id="oNU-fD-Gnm"/>
+                <constraint firstItem="Mqs-AQ-iaQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="t81-RA-jZZ"/>
+            </constraints>
+            <size key="customSize" width="167" height="81"/>
+            <connections>
+                <outlet property="gameTitle" destination="Z1q-l3-02D" id="QvY-xO-HxZ"/>
+                <outlet property="gamename" destination="vDT-A7-nUh" id="ueb-WP-THj"/>
+                <outlet property="nowImage" destination="AfQ-k3-c8n" id="RVb-i8-OY2"/>
+                <outlet property="personNumber" destination="Gw7-Zz-OSo" id="KZC-MC-Os7"/>
+                <outlet property="username" destination="Mqs-AQ-iaQ" id="6yp-5E-v96"/>
+            </connections>
+            <point key="canvasLocation" x="38.5" y="52.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="classify_tag" width="57" height="15"/>
+        <image name="look_image" width="12" height="12"/>
+    </resources>
+</document>

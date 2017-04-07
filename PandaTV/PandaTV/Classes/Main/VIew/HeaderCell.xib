@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="HeaderCell" customModule="PandaTV" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="热门" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ep-V9-iWX">
+                    <rect key="frame" x="147" y="17" width="27" height="16"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xcx_send_button" translatesAutoresizingMaskIntoConstraints="NO" id="oUr-R5-B1w">
+                    <rect key="frame" x="122" y="24" width="15" height="3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="3" id="c1R-eB-1vW"/>
+                        <constraint firstAttribute="width" constant="15" id="tEO-5p-izZ"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xcx_send_button" translatesAutoresizingMaskIntoConstraints="NO" id="bsl-LV-LAf">
+                    <rect key="frame" x="184" y="24" width="15" height="3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="3" id="64V-8u-keR"/>
+                        <constraint firstAttribute="width" constant="15" id="C5A-Pw-xy8"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQR-hK-FVv">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="5"/>
+                    <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="5" id="d7o-wA-ZVj"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="7ep-V9-iWX" firstAttribute="leading" secondItem="oUr-R5-B1w" secondAttribute="trailing" constant="10" id="3gD-Ma-k0e"/>
+                <constraint firstItem="zQR-hK-FVv" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="7Sp-OQ-eGq"/>
+                <constraint firstItem="oUr-R5-B1w" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="EBl-FF-Z7s"/>
+                <constraint firstItem="7ep-V9-iWX" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="KJP-S8-cYy"/>
+                <constraint firstItem="bsl-LV-LAf" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="Kcs-Bb-IzL"/>
+                <constraint firstItem="bsl-LV-LAf" firstAttribute="leading" secondItem="7ep-V9-iWX" secondAttribute="trailing" constant="10" id="RQh-hE-WAv"/>
+                <constraint firstItem="zQR-hK-FVv" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="lgl-Ki-kBa"/>
+                <constraint firstAttribute="trailing" secondItem="zQR-hK-FVv" secondAttribute="trailing" id="nR8-uM-POp"/>
+                <constraint firstItem="7ep-V9-iWX" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="nzB-Uq-KfK"/>
+            </constraints>
+            <connections>
+                <outlet property="gameName" destination="7ep-V9-iWX" id="QYQ-ni-0dJ"/>
+            </connections>
+            <point key="canvasLocation" x="41" y="61"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="xcx_send_button" width="138" height="29"/>
+    </resources>
+</document>

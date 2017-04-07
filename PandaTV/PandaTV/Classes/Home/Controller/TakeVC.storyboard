@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="c8F-Lf-1CP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TakeVC-->
+        <scene sceneID="bXg-RJ-gWT">
+            <objects>
+                <viewController id="c8F-Lf-1CP" customClass="TakeVC" customModule="PandaTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b93-rU-2B1"/>
+                        <viewControllerLayoutGuide type="bottom" id="UE4-py-kst"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zlb-DP-i57">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_login" translatesAutoresizingMaskIntoConstraints="NO" id="9Wz-3G-vLl">
+                                <rect key="frame" x="117" y="228" width="141" height="81"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLC-Nx-z1s">
+                                <rect key="frame" x="97" y="308" width="181" height="52"/>
+                                <state key="normal" image="home_login_btn"/>
+                                <state key="highlighted" image="home_login_btn_h"/>
+                                <connections>
+                                    <action selector="loginBtn:" destination="c8F-Lf-1CP" eventType="touchUpInside" id="BQb-vp-gVN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Wz-3G-vLl" firstAttribute="centerY" secondItem="Zlb-DP-i57" secondAttribute="centerY" constant="-65" id="KFj-H0-rBo"/>
+                            <constraint firstItem="9Wz-3G-vLl" firstAttribute="centerX" secondItem="Zlb-DP-i57" secondAttribute="centerX" id="OYe-KC-a4X"/>
+                            <constraint firstItem="uLC-Nx-z1s" firstAttribute="centerY" secondItem="Zlb-DP-i57" secondAttribute="centerY" id="VKg-6c-XtA"/>
+                            <constraint firstItem="uLC-Nx-z1s" firstAttribute="centerX" secondItem="Zlb-DP-i57" secondAttribute="centerX" id="ZVA-mC-1Xo"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="acK-5J-j93" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="-360"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="home_login" width="141" height="81"/>
+        <image name="home_login_btn" width="181" height="52"/>
+        <image name="home_login_btn_h" width="181" height="52"/>
+    </resources>
+</document>
