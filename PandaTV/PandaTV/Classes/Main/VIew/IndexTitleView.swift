@@ -15,6 +15,7 @@ private let titleButtonH : CGFloat = 32
 
 protocol IndexTitleViewDetegate : class {
     func indexTitleView(index : Int)
+    func indexTitleViewToSearch()
 }
 
 class IndexTitleView: UIView {
@@ -27,6 +28,7 @@ class IndexTitleView: UIView {
     lazy var searchBtn : UIButton = {
         let btn = UIButton()
         btn.setImage(UIImage(named : "search_new"), for: .normal)
+        btn.addTarget(self, action: #selector(search), for: .touchUpInside)
         
         return btn
     }()
@@ -107,6 +109,10 @@ extension IndexTitleView {
 
 // MARK: - 事件处理
 extension IndexTitleView {
+    @objc fileprivate func search() {
+        delegate?.indexTitleViewToSearch()
+    }
+    
     @objc fileprivate func titleClick(btn : UIButton) {
         self.selected?.isSelected = false
         btn.isSelected = true

@@ -10,36 +10,38 @@ import UIKit
 import MJRefresh
 
 class CommendVC: GameBasicVC {
+    
+    override func viewDidLayoutSubviews() {
+        let layout = commendView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = CGSize(width: gameItemW, height: gameItemH)
+        
+        commendView.frame = self.view.bounds
+    }
 
 }
 
 // MARK: - 数据请求
 extension CommendVC {
     override func loadData() {
-        let group = DispatchGroup()
-        //加载轮播 推荐数据
-        group.enter()
-        gameBasicItem.requestCommendCycle(searchPath: nil) {
-            //设置轮播图片数据
-            self.scrollImageView.items = self.gameBasicItem.thundcycleitem?.cycleItems
+        //加载数据
+        gameBasicItem.requestCommendGame {
+            if (self.gameBasicItem.thundcycleitem?.cycleItems.count)! == 0 {
+                self.scrollImageView.isHidden = true
+                self.commendView.contentInset = UIEdgeInsets(top: thundViewH, left: 0, bottom: 0, right: 0)
+                self.commendView.mj_header.ignoredScrollViewContentInsetTop = thundViewH
+            }else {
+                self.scrollImageView.isHidden = false
+                self.scrollImageView.items = self.gameBasicItem.thundcycleitem?.cycleItems
+                self.commendView.contentInset = UIEdgeInsets(top: cycleViewH + thundViewH, left: 0, bottom: 0, right: 0)
+                self.commendView.mj_header.ignoredScrollViewContentInsetTop = cycleViewH + thundViewH
+            }
             //设置推荐游戏数据
             self.gameView.items = self.gameBasicItem.thundcycleitem?.thundimages
-            group.leave()
-        }
-        
-        //加载游戏数据
-        group.enter()
-        gameBasicItem.requestCommendGame {
             self.commendView.reloadData()
-            group.leave()
-        }
-        
-        group.notify(queue: DispatchQueue.main) {
             self.commendView.mj_header.endRefreshing()
             self.removeLoadImage()
         }
     }
-    
 }
 
 // MARK: - 推荐页面游戏数据源,代理

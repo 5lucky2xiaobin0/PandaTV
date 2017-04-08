@@ -39,7 +39,18 @@ extension ShowTypeCycleVC {
         index = 1
         showtypecyclevm.requestData(searchPath: showTypeName!, index : index) { _ in
             self.showCollectionView.mj_header.endRefreshing()
-            self.scrollImageView.items = self.showtypecyclevm.cycleImageArr
+            //判断是否有轮播图片
+            if self.showtypecyclevm.cycleImageArr.count == 0 {
+                self.scrollImageView.isHidden = true
+                self.showCollectionView.contentInset = UIEdgeInsets.zero
+                self.showCollectionView.mj_header.ignoredScrollViewContentInsetTop = 0
+            }else {
+                self.scrollImageView.isHidden = false
+                self.showCollectionView.contentInset = UIEdgeInsets(top: cycleViewH, left: 0, bottom: 0, right: 0)
+                self.showCollectionView.mj_header.ignoredScrollViewContentInsetTop = cycleViewH
+                self.scrollImageView.items = self.showtypecyclevm.cycleImageArr
+            }
+
             self.showCollectionView.reloadData()
             self.index+=1
             self.showCollectionView.mj_footer.isHidden = false

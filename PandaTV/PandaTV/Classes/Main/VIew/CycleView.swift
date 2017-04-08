@@ -19,6 +19,7 @@ class CycleView: UIView {
     var items : [CycleItem]? {
         didSet {
             guard let image = items else {return}
+            if image.count == 0 {return}
             
             pageCon.numberOfPages = image.count
             scrollView.reloadData()

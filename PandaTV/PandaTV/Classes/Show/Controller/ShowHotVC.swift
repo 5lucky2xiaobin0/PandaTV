@@ -47,8 +47,17 @@ extension ShowHotVC {
         let group = DispatchGroup()
         
         group.enter()
-        showhotvm.requestCycleData { 
-            self.scrollImageView.items = self.showhotvm.cycleItem
+        showhotvm.requestCycleData {
+            if self.showhotvm.cycleItem.count == 0 {
+                self.scrollImageView.isHidden = true
+                self.showCollectionView.contentInset = UIEdgeInsets.zero
+            }else {
+                self.scrollImageView.isHidden = false
+                self.showCollectionView.mj_header.ignoredScrollViewContentInsetTop = cycleViewH
+                self.showCollectionView.contentInset = UIEdgeInsets(top: cycleViewH, left: 0, bottom: 0, right: 0)
+                self.scrollImageView.items = self.showhotvm.cycleItem
+            }
+            
             group.leave()
         }
         

@@ -11,45 +11,33 @@ import UIKit
 class GameTypeVC: GameBasicVC {
     
     var searchPath : String?
+
+    override func viewDidLayoutSubviews() {
+        let layout = commendView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = CGSize(width: gameItemW, height: gameItemH)
+        
+        commendView.frame = self.view.bounds
+    }
 }
 
 extension GameTypeVC {
     override func loadData() {
-        let group = DispatchGroup()
         if let path = searchPath {
-          
-            group.enter()
-            gameBasicItem.requestCommendCycle(searchPath: path) {
-                //设置轮播图片数据
-                if (self.gameBasicItem.thundcycleitem?.cycleItems.count)! > 0 {
+            gameBasicItem.requestGameData(searchPath: path, finish: {
+                self.commendView.mj_header.endRefreshing()
+                if (self.gameBasicItem.thundcycleitem?.cycleItems.count)! == 0 {
+                    self.scrollImageView.isHidden = true
+                    self.commendView.contentInset = UIEdgeInsets(top: thundViewH, left: 0, bottom: 0, right: 0)
+                    self.commendView.mj_header.ignoredScrollViewContentInsetTop = thundViewH
+                }else {
                     self.scrollImageView.isHidden = false
                     self.scrollImageView.items = self.gameBasicItem.thundcycleitem?.cycleItems
-                }else {
-                    self.scrollImageView.isHidden = true
+                    self.commendView.contentInset = UIEdgeInsets(top: cycleViewH + thundViewH, left: 0, bottom: 0, right: 0)
+                    self.commendView.mj_header.ignoredScrollViewContentInsetTop = cycleViewH + thundViewH
                 }
-                
-                //设置推荐游戏数据
-                if (self.gameBasicItem.thundcycleitem?.thundimages.count)! > 0 {
-                    self.gameView.isHidden = false
-                    self.gameView.items = self.gameBasicItem.thundcycleitem?.thundimages
-                }else {
-                    self.gameView.isHidden = true
-                }
-                
-                group.leave()
-            }
-            
-            group.enter()
-            gameBasicItem.requestGameData(searchPath: path, finish: {
+                self.gameView.items = self.gameBasicItem.thundcycleitem?.thundimages
                 self.commendView.reloadData()
-                group.leave()
-            })
-            
-            group.notify(queue: DispatchQueue.main, execute: { 
-                self.commendView.mj_header.endRefreshing()
-                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now(), execute: {
-                    self.removeLoadImage()
-                })
+                self.removeLoadImage()
             })
         }
     }

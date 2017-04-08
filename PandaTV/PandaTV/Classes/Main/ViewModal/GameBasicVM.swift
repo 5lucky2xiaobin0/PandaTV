@@ -22,36 +22,25 @@ class GameBasicVM: NSObject {
     //首页所有游戏
     var allGames : [GameItem] = [GameItem]()
     
-    //请求轮播数据
-    func requestCommendCycle(searchPath : String?, finish : @escaping () -> ()) {
-        var urlString : String
-        
-        //首页的轮播数据和其他页面的url不同,判断是否有传入页面标识
-        if let path = searchPath {
-            urlString = "http://api.m.panda.tv/index.php?method=slider.cate&cate=\(path)&__plat=ios&__version=3.0.4.3078&__plat=ios&__channel=appstore"
-        }else {
-           urlString = "http://api.m.panda.tv/?method=slider.cate&cate=index&__version=3.0.4.3078&__plat=ios&__channel=appstore"
-        }
-        
-        NetworkTools.requestData(url: urlString) { (result) in
-            guard let resultDict = result as? [String : Any] else {return}
-            guard let dataDict = resultDict["data"] as? [String : Any] else {return}
-            
-            self.thundcycleitem = ThundCycleItem(dict: dataDict)
-            
-            finish()
-        }
-    }
-    
     //请求首页推荐游戏数据
     func requestCommendGame(finish : @escaping () -> ()) {
         self.liveItems.removeAll()
         self.showItems.removeAll()
         
         let gameUrl = "http://api.m.panda.tv/?method=card.list&cate=index&__version=3.0.4.3078&__plat=ios&__channel=appstore"
-        
+        let cycleUrl = "http://api.m.panda.tv/?method=slider.cate&cate=index&__version=3.0.4.3078&__plat=ios&__channel=appstore"
 
         let group = DispatchGroup()
+      
+        group.enter()
+        NetworkTools.requestData(url: cycleUrl) { (result) in
+            guard let resultDict = result as? [String : Any] else {return}
+            guard let dataDict = resultDict["data"] as? [String : Any] else {return}
+            
+            self.thundcycleitem = ThundCycleItem(dict: dataDict)
+            group.leave()
+        }
+        
         
         group.enter()
         NetworkTools.requestData(url: gameUrl) { (result) in
@@ -115,11 +104,28 @@ class GameBasicVM: NSObject {
         }
     }
   
-    //请求游戏数据
+    //请求游戏页面数据
     func requestGameData(searchPath : String, finish : @escaping () -> ()) {
         
-        let urlString = "http://api.m.panda.tv/index.php?method=card.list&cate=\(searchPath)&__version=3.0.2.3045&__plat=ios&__channel=appstore"
+        var urlString : String
         
+         urlString = "http://api.m.panda.tv/index.php?method=slider.cate&cate=\(searchPath)&__plat=ios&__version=3.0.4.3078&__plat=ios&__channel=appstore"
+
+        let group = DispatchGroup()
+        
+        group.enter()
+        NetworkTools.requestData(url: urlString) { (result) in
+            guard let resultDict = result as? [String : Any] else {return}
+            guard let dataDict = resultDict["data"] as? [String : Any] else {return}
+            
+            self.thundcycleitem = ThundCycleItem(dict: dataDict)
+            
+            group.leave()
+        }
+        
+        urlString = "http://api.m.panda.tv/index.php?method=card.list&cate=\(String(describing: searchPath))&__version=3.0.2.3045&__plat=ios&__channel=appstore"
+        
+        group.enter()
         NetworkTools.requestData(url: urlString) { (result) in
             guard let resultDict = result as? [String : Any] else {return}
             guard let dataArr = resultDict["data"] as? [[String : Any]] else {return}
@@ -131,12 +137,11 @@ class GameBasicVM: NSObject {
                 }
                 self.liveItems.append(LiveItem(dict: dataDict))
             }
-            
-            finish()
+            group.leave()
         }
         
+        group.notify(queue: DispatchQueue.main) { 
+            finish()
+        }
     }
-    
-    
-
 }

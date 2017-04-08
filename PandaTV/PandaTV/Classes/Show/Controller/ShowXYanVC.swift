@@ -36,7 +36,17 @@ extension ShowXYanVC {
     override func loadData() {
         showxyanvm.requestShowData { _ in
             self.showCollectionView.mj_header.endRefreshing()
-            self.scrollImageView.items = self.showxyanvm.cycleImageArr
+            //判断是否有轮播图片
+            if self.self.showxyanvm.cycleImageArr.count == 0 {
+                self.scrollImageView.isHidden = true
+                self.showCollectionView.contentInset = UIEdgeInsets.zero
+                self.showCollectionView.mj_header.ignoredScrollViewContentInsetTop = 0
+            }else {
+                self.scrollImageView.isHidden = false
+                self.showCollectionView.contentInset = UIEdgeInsets(top: cycleViewH, left: 0, bottom: 0, right: 0)
+                self.showCollectionView.mj_header.ignoredScrollViewContentInsetTop = cycleViewH
+                self.scrollImageView.items = self.self.showxyanvm.cycleImageArr
+            }
             self.showCollectionView.reloadData()
             self.removeLoadImage()
         }

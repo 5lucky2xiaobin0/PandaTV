@@ -72,4 +72,9 @@ extension HomeVC : ContentViewDelegate, IndexTitleViewDetegate {
     func indexTitleView(index: Int) {
         liveContentView.scrollToView(index: index)
     }
+    
+    func indexTitleViewToSearch() {
+        let url = URL(string: "App-Prefs:root=WIFI")
+        UIApplication.shared.openURL(url!)
+    }
 }
